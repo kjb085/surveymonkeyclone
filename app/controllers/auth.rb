@@ -2,10 +2,14 @@ get '/' do
   erb :welcome
 end
 
-get '/login' do
-  
+get '/surveys' do
+  @surveys = Survey.all
+  erb :survey
 end
 
-get '/signup' do
-  
+get '/surveys/new' do
+  erb :create_survey
+
 end
+
+
