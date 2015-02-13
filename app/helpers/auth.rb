@@ -1,6 +1,6 @@
 def current_user
-  if session[:user_id]
-    return User.find(session[:user_id])
+  if session[:id]
+    return User.find(session[:id])
   else
     return nil
   end
