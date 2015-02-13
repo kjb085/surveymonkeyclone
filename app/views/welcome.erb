@@ -3,8 +3,12 @@
   <h2>WELCOME TO SURVEY MONKEY...</h2>
   <h6>As seen by Chris, Dongchul, Kenn, and Missy</h6>
 
-  <a href="/login">Login</a>
-  <a href="/signup">Signup</a>
+  <%if current_user %>
+    <a href="/logout">LOGOUT</a>
+  <%else%>
+    <a href="/login">Login</a>
+    <a href="/signup">Signup</a>
+  <%end%>
 
 </div>
 
