@@ -5,10 +5,23 @@ get '/surveys/new' do
 end
 
 post '/surveys/create' do
+
+
   session[:id] = 1
+
   @survey = Survey.create(user_id: session[:id], title: params[:title])
 
-  @question = Question.create(survey_id: @survey.id, content: params[:content])
+
+   session[:question_count].times do |i|
+
+    p "bacon cuz get on our level ZACK!!!!!!!!!"
+    p i
+
+    params["q#{i}".to_sym][:survey_id] = @survey.id
+    Question.create( params["q#{i}".to_sym]  )
+
+  end
+
 
   redirect "/surveys/#{@survey.id}"
 
@@ -16,8 +29,11 @@ end
 
 
 get '/surveys/new/add_question' do
-  puts 'CHRIS AHHHHHHHHH'
 
-  erb :_add_questions, :layout => false
+ @question_count = params[:qCount].to_i
+
+ session[:question_count] = @question_count + 1
+
+ erb :_add_questions, :layout => false
 
 end
