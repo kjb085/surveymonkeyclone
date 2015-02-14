@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log(this)
   // This is called after the document has loaded in its entirety
   // This guarantees that any elements we bind to will exist on the page
   // when we try to bind to them
@@ -11,10 +10,8 @@ $(document).ready(function() {
   	});
 
   	$("#login_ajax").on("submit", function(event){
-  		console.log(this)
   		event.preventDefault();
   		var $form = $(event.target);
-  		console.log($form);
   		$.ajax({
   			url: $form.attr('action'),
   			type: $form.attr('method'),
@@ -22,7 +19,6 @@ $(document).ready(function() {
   			success: function(response){
   				$(".container").remove();
   				$("#content").append(response);
-  				console.log(this)
   			},
 				error: function(){},
 			/* Act on the event */

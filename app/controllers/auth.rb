@@ -16,9 +16,9 @@ get '/surveys/new' do
   erb :create_survey
 end
 
-post '/login' do
-  erb :login
-end
+# post '/login' do
+#   erb :login
+# end
 
 # I need a seperate post for the signup page, but is that a post '/index'?
 
@@ -31,7 +31,6 @@ end
 #this get route isnt needed anymore
 
 post '/login' do
-  p params
   user = User.find_by(email: params[:user][:email])
   	if user.try(:authenticate, params[:user][:password])
     	session[:id] = user.id
