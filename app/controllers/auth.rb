@@ -2,10 +2,10 @@ get '/' do
   redirect "/index"
 end
 
+##################### WELCOME PAGE#########################################
 get '/index' do
   erb :welcome
 end
-
 
 get '/surveys' do
   @surveys = Survey.all
@@ -23,15 +23,17 @@ end
 # I need a seperate post for the signup page, but is that a post '/index'?
 
 
+####################### LOGIN PAGE #############################################
+
 get '/login' do
   erb :login
 end
 
 post '/login' do
-  user = User.find_by(params[:user][:email])
+  user = User.find_by(email: params[:user][:email])
+  p user
 
   if user.try(:authenticate, params[:user][:password])
-    #why is this user_id? did i have to set that somewhere else?
     session[:id] = user.id
     redirect '/'
   else
@@ -39,20 +41,26 @@ post '/login' do
   end
 end
 
+####################### SIGNUP PAGE #######################################
 get '/signup' do
-  @user = User.create(params[:user])
-
-
-end
-
-post '/signup' do
   erb :signup
 end
 
+post '/signup' do
+  user = User.create(params[:user])
 
+  if user.save
+    session[:id] = user.id
+    redirect '/'
+  else
+    redirect '/signup'
+  end
+end
+
+############################# LOGOUT ####################################
 get '/logout' do
-
-
+  session[:id] = nil
+  redirect '/'
 end
 
 
