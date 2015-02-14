@@ -6,7 +6,8 @@
   <%if current_user %>
     <a href="/logout">LOGOUT</a>
   <%else%>
-    <a href="/login">Login</a>
+    <a id="login_btn" href="/login">Login</a>
+    <%= erb :login %>
     <a href="/signup">Signup</a>
   <%end%>
 
