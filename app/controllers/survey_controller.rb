@@ -14,8 +14,7 @@ post '/surveys/create' do
 
    session[:question_count].times do |i|
 
-    p "bacon cuz get on our level ZACK!!!!!!!!!"
-    p i
+    p "get on our level ZACK!!!!!!!!!"
 
     params["q#{i}".to_sym][:survey_id] = @survey.id
     Question.create( params["q#{i}".to_sym]  )
