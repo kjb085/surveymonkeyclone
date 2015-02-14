@@ -4,8 +4,18 @@
   	<h2><%= @survey.title %></h2>
   </div>
 
-  <div>
-  	<%= @survey.questions. %>
+  <div class="question">
+  	<p><%= @survey.questions %></p>
+
+  </div>
+
+  <div class="answers">
+    <form action="/surveys/<%=@survey.id%>/answer" method="GET">
+      Yes <input type="radio" name="yesno" value="yes">
+      <br>
+      No <input type="radio" name="yesno" value="no">
+      <input type="submit">
+    </form>
   </div>
 
 </div>
