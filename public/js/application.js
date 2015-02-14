@@ -80,6 +80,5 @@ $(document).ready(function() {
 
 //   })
 
- finishc reating surveys and questions and additive questions
 
 });
