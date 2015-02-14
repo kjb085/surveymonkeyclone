@@ -52,9 +52,11 @@ post '/signup' do
 
   if user.save
     session[:id] = user.id
-    redirect '/'
-  else
-    redirect '/signup'
+    if request.xhr?
+      erb :welcome, layout: false
+    else
+      redirect '/signup'
+    end
   end
 end
 
