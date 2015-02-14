@@ -28,17 +28,19 @@ end
 get '/login' do
   erb :login
 end
+#this get route isnt needed anymore
 
 post '/login' do
+  p params
   user = User.find_by(email: params[:user][:email])
-  p user
-
-  if user.try(:authenticate, params[:user][:password])
-    session[:id] = user.id
-    redirect '/'
-  else
-    redirect '/signup'
-  end
+  	if user.try(:authenticate, params[:user][:password])
+    	session[:id] = user.id
+		  if request.xhr?
+    		erb :welcome, layout: false
+		  else
+  		  redirect '/signup'
+ 		 end
+ 		end
 end
 
 ####################### SIGNUP PAGE #######################################
