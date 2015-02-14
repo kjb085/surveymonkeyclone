@@ -7,6 +7,11 @@ $(document).ready(function() {
   		$(".login_form").toggle();
   	});
 
+    $("#signup_btn").on("click", function(event){
+      event.preventDefault();
+      $(".signup_form").toggle();
+    });
+
   	$("#login_ajax").on("submit", function(event){
   		event.preventDefault();
   		var $form = $(event.target);
@@ -21,8 +26,22 @@ $(document).ready(function() {
 				error: function(){},
 			/* Act on the event */
 			});
+  	});
 
-  	})
+    $("#signup_ajax").on("submit", function(event){
+      event.preventDefault();
+      var $form = $(event.target);
+      $.ajax({
+        url: '/signup',
+        type: 'POST',
+        data: $form.serialize(),
+        success: function(response){
+          $(".container").remove();
+          $("#content").append(response);
+        }
+      });
+    });
+
 
   $('.add_question').on('click',function(event){
 
