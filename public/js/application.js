@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+  // Login AJAX Call
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   	$("#login_btn").on("click", function(event){
   		event.preventDefault();
@@ -24,11 +24,10 @@ $(document).ready(function() {
 
   	})
 
+  // Create survey + questions AJAX call
   $('.add_question').on('click',function(event){
 
     event.preventDefault();
-
-
 
     $.ajax(
     {
@@ -79,6 +78,35 @@ $(document).ready(function() {
 
 
 //   })
+
+  // Start survey and render first question AJAX call
+  // $('#start_survey').on('click', function(event){
+  //   event.preventDefault();
+
+  //   $.ajax({
+  //     type: 'get',
+  //     url: this.href,
+  //     data: {},
+  //     success: function(response){
+  //       console.log(response)
+  //       // Remove start survey button
+  //       // .html the response to #question
+  //       // Include a submit survey button
+  //     },
+  //     error: function(){
+  //       console.log("AJAX returning error")
+  //     }
+  //   })
+  // })
+
+  // $('#submit_survey').on('click', function(){
+
+  // })
+
+  // Not sure I want to keep this, but it currently serves as the survey completion feedback
+  // $('#submit_survey').on('click', function(event){
+  //   alert("Thanks for taking the survey")
+  // })
 
 
 });
