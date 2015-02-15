@@ -10,7 +10,7 @@ end
 #   erb :_show_next_question, :layout => false
 # end
 
-put '/surveys/:id/complete' do |id|
+put '/surveys/:id' do |id|
 
   survey = Survey.find(id)
 
@@ -32,6 +32,7 @@ put '/surveys/:id/complete' do |id|
 
     redirect '/surveys'
   else
+    # This isn't really working right now, not sure why
   	# Create something on the page with jquery that indicates that all questions need to be answered
   	redirect '/surveys/#{id}'
   end
