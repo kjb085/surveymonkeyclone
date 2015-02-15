@@ -24,10 +24,9 @@ $(document).ready(function() {
           $(".container").remove();
           $("#content").append(response);
           console.log(response);
-
         },
         error: function(response){
-          console.log("YOU'VE FAILED")
+          console.log("YOU'VE FAILED");
         }
       });
     });

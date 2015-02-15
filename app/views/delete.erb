@@ -1,0 +1,13 @@
+
+
+<div class="actions">
+      <form class="delete_skatelog" action="/users/<%= user.id%>/show" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <div class="btn_container">
+          <a class='btn' href="/users/<%= user.id %>/skatelogs">delete a session</a>
+        </div>
+        <div class="btn_container">
+            <input type="submit" value="DELETE">
+        </div>
+      </form>
+    </div>

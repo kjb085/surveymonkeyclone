@@ -5,6 +5,7 @@ class CreateSkatelogs < ActiveRecord::Migration
       t.string :seshtime, null: false
       t.string :tricks, null: false
       t.text :description
+      t.references :user
       t.timestamps
     end
   end

@@ -1,23 +1,22 @@
 
 <div class="container">
 
-  <% if current_user %>
-    <a class="logout_btn" href="/logout">LOGOUT</a>
-  <% else %>
-    <a class="login_btn" href="/login">LOGIN</a>
-    <%= erb :login %>
-    <a class="signup_btn" href="/signup">SIGNUP</a>
-    <%= erb :signup %>
-   <% end %>
-
-
    <h2>Welcome to SkateLyfe!</h2>
    <h4>Checkout all these skaters' skatelogs!</h4>
 
-  <div class="seshTweet">
-    <img src="#profpicUrl">
-     <a href="">SB StateStreet Sesh</a>
-     <p>users' username</p>
-     <p>HOW MANY COMMENTS</p>
+   <div class="auth_btns">
+    <% if current_user %>
+      <a class="logout_btn" href="/logout">LOGOUT</a>
+      <a href="/show"> + </a>
+    <% else %>
+      <a class="login_btn" href="/login">LOGIN</a>
+      <%= erb :login %>
+      <a class="signup_btn" href="/signup">SIGNUP</a>
+      <%= erb :signup %>
+     <% end %>
   </div>
+
+  <%= erb :list_skatelogs %>
+
+
 </div>
