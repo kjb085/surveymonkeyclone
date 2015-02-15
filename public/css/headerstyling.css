@@ -14,8 +14,8 @@ top:-10px;
 
 .logo img{
   position:relative;
-height:175px;
-float:right;
+  height:175px;
+  float:right;
 }
 
 .wrap{
@@ -23,10 +23,41 @@ float:right;
     text-align:center;
     position:relative;
     margin:0 auto;
-
     width:725px;
     height:100%;
+}
+
+.login{
+  margin-top:50px;
+  position:relative;
+
+  background:blue;
+  height:500px;
+}
+
+.logout{
+  position:relative;
+  top:125px;
+  color:#E6E6DC;
+  text-decoration:none;
+  left:25px;
+  font-size:15px;
+
+}
+
+.logout:hover{
+  color: #602b2b;
+  position:relative;
+  top:125px;
+  text-decoration:none;
+  left:25px;
+  font-size:15px;
+}
 
 
+.inner {
+  position:relative;
+  background:gray;
+  height:50%;
 }
 
