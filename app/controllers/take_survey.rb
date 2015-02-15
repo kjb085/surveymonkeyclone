@@ -16,7 +16,7 @@ put '/surveys/:id/complete' do |id|
 
   total_questions = survey.questions.count
 
-  if params[:answers] && params[:answers].length == session[:q_count]
+  if params[:answers] && params[:answers].length == total_questions
 	  params[:answers].each_value do |answer|
   	  if answer == "yes"
   	  	survey.yes_num += 1
