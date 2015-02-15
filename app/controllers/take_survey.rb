@@ -10,14 +10,14 @@ end
 #   erb :_show_next_question, :layout => false
 # end
 
-put '/surveys/:id/complete' do |id|
+put '/surveys/:id' do |id|
 
   survey = Survey.find(id)
 
   total_questions = survey.questions.count
 
-  if params[:answers] && params[:answers].length == session[:q_count]
-	  params[:answers].each_value do |answer|
+  if params[:answers].length == total_questions
+  	params[:answers].each_value do |answer|
   	  if answer == "yes"
   	  	survey.yes_num += 1
   	  elsif answer == "no"
