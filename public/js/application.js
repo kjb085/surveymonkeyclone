@@ -17,11 +17,14 @@ $(document).ready(function() {
       event.preventDefault();
       var $form = $(event.target);
       $.ajax({
-        url: $form.attr('action'),
+        url:  $form.attr('action'),
         type: $form.attr('method'),
         data: $form.serialize(),
         success: function(response){
-          console.log("YOU ARE SUCCESFUL")
+          $(".container").remove();
+          $("#content").append(response);
+          console.log(response);
+
         },
         error: function(response){
           console.log("YOU'VE FAILED")
