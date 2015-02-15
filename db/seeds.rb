@@ -1,5 +1,8 @@
-User.create(name: "Kenn", email: "kenn@google.com", password: "1234")
 
-Survey.create(user_id: 1, title: "Love JS", ans_percents: [0, 100, 50])
+User.create(name: "Missy", username: "Zenon", boardtype: "longboard", password: "123")
 
-Question.create(survey_id: 1, content: "Do you love JS?")
+User.create(name: "Ryan Sheckler", username: "Ryan", boardtype: "orangatang wheels", password: "123")
+User.create(name: "Paul Rodriguez", username: "P-Rod", boardtype: "redbull", password: "123")
+User.create(name: "Nyjah Huston", username: "SickKid", boardtype: "element", password: "123")
+User.create(name: "Rob Dyrdek", username: "FantasyFactory", boardtype: "dc", password: "123")
+
