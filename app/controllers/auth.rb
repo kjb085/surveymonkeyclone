@@ -1,7 +1,7 @@
 
 ######################### LOGIN ###########################################
 get '/login' do
-erb :login
+  erb :login
 end
 
 post '/login' do
@@ -11,7 +11,7 @@ post '/login' do
     session[:id] = user.id
 
     if request.xhr?
-      erb :welcome, layout: false
+      erb :index, layout: false
     else
       redirect '/signup'
     end
