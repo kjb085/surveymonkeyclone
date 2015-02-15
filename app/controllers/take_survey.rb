@@ -27,8 +27,8 @@ put '/surveys/:id/complete' do |id|
 	  end
 	end
 	
-	survey.num_taken += 1
-  	survey.save
+	  survey.num_taken += 1
+    survey.save
 
   	redirect '/surveys'
   else
