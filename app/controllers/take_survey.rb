@@ -17,20 +17,20 @@ put '/surveys/:id/complete' do |id|
   total_questions = survey.questions.count
 
   if params[:answers] && params[:answers].length == session[:q_count]
-	params[:answers].each_value do |answer|
-	  if answer == "yes"
-	  	survey.yes_num += 1
-	  elsif answer == "no"
-	  	survey.no_num += 1
-	  else
-	  	nil
+	  params[:answers].each_value do |answer|
+  	  if answer == "yes"
+  	  	survey.yes_num += 1
+  	  elsif answer == "no"
+  	  	survey.no_num += 1
+  	  else
+  	  	nil
+  	  end
 	  end
-	end
 	
 	  survey.num_taken += 1
     survey.save
 
-  	redirect '/surveys'
+    redirect '/surveys'
   else
   	# Create something on the page with jquery that indicates that all questions need to be answered
   	redirect '/surveys/#{id}'
