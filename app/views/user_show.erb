@@ -1,0 +1,24 @@
+<div class="main">
+  <div class='welcome'>
+  	<h1>Hello <%= @user.name %></h1>
+  	<p>Options:</p>
+  	<a href="/users/<%@user.id%>/edit" class="btn">Edit Profile</a>
+  	<a href="/users/<%@user.id%>/delete" class="btn">Delete Account</a>
+  </div>
+  <div class='surveys'>
+  	<h3>Your Surveys:</h3>
+  	<% @user.surveys.all.each do |survey| %>
+  	<% (survey.yes_num + survey.no_num) > 0 ? percent_yes = survey.yes_num / (survey.yes_num + survey.no_num) : percent_yes = "N/A" %>
+  	<ul>
+  		<li>
+  			<a href="/surveys/<%=survey.id%>"><%=survey.title%></a>
+  			<p>Positive Stats: <%= percent_yes %> <%= percent_yes.is_a?(Integer) ? "%" : "" %> </p>
+  			<p>Times taken: <%= survey.num_taken %></p>
+  			<p>Created at: <%= survey.created_at %></p>
+  			<a href="/users/<%=@user.id%>/edit" class="btn">Edit</a>
+  			<a href="#" class="btn">Delete</a>
+  		</li>
+  	</ul>
+  	<% end %>
+  </div>
+</div>
