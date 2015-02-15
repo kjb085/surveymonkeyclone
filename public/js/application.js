@@ -6,6 +6,12 @@ $(document).ready(function() {
       $(".login_form").toggle();
     });
 
+    $(".signup_btn").on("click", function(event){
+      event.preventDefault();
+      console.log("you clicked!")
+      $(".signup_form").toggle();
+    });
+
 
     $(".login_ajax").on("submit", function(event){
       event.preventDefault();
