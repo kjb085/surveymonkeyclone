@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-  // Login AJAX Call
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   	$("#login_btn").on("click", function(event){
   		event.preventDefault();

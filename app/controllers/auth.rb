@@ -40,6 +40,7 @@ post '/login' do
   		  redirect '/signup'
  		 end
  		end
+    redirect '/surveys'
 end
 
 ####################### SIGNUP PAGE #######################################
@@ -58,6 +59,7 @@ post '/signup' do
       redirect '/signup'
     end
   end
+  redirect '/surveys'
 end
 
 ############################# LOGOUT ####################################
