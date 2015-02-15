@@ -1,2 +1,23 @@
- Welcome to SkateLyfe!
- Checkout all these skaters skatelogs!
+
+<div class="container">
+
+  <% if current_user %>
+    <a href="/logout">LOGOUT</a>
+  <% else %>
+    <a href="/login">LOGIN</a>
+    <% erb :login %>
+    <a href="/signup">SIGNUP</a>
+    <% erb :signup %>
+   <% end %>
+
+
+   <h2>Welcome to SkateLyfe!</h2>
+   <h4>Checkout all these skaters' skatelogs!</h4>
+
+  <div class="seshTweet">
+    <img src="#profpicUrl">
+     <a href="">SB StateStreet Sesh</a>
+     <p>users' username</p>
+     <p>HOW MANY COMMENTS</p>
+  </div>
+</div>
