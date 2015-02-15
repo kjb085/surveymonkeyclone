@@ -1,0 +1,33 @@
+<div class="main">
+
+  <div class="survey">
+  	<h2><%= @survey.title %></h2>
+  </div>
+
+  <div id="questions">
+    <!-- <div id="question_tracker">
+      <p><%= @current_q %>/<%= @total_qs %><p>
+    </div> -->
+    <!-- <form action="/surveys/<%=@survey.id%>/next_question" method="GET"> -->
+    <form action="/surveys/<%=@survey.id%>/complete" method="post">
+      <input type="hidden" name="_method" value="put">
+      <% @questions.each_with_index do |question, index| %>
+      <div class="question">
+        <p><%= question.content %></p>
+      </div>
+      <div class="answers">
+        Yes <input type="radio" name="answers[<%=index%>yesno]" value="yes">
+        <br>
+        No <input type="radio" name="answers[<%=index%>yesno]" value="no">
+        <% end %>
+        <input id="submit_survey" type="submit" value="Submit Survey">
+      </div>
+    </form>
+  </div>
+
+
+
+  <!-- <div>
+    <a id="start_survey" class="btn" href="/surveys/<%= @survey.id %>/next_question">Start Survey</a>
+  </div> -->
+</div>
