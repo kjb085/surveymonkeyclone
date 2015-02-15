@@ -2,13 +2,16 @@
   <div class='welcome'>
   	<h1>Hello <%= @user.name %></h1>
   	<p>Options:</p>
-  	<a href="/users/<%@user.id%>/edit" class="btn">Edit Profile</a>
-  	<a href="/users/<%@user.id%>/delete" class="btn">Delete Account</a>
+  	<a href="/users/<%=@user.id%>/edit" class="btn">Edit Profile</a>
+  	<a href="/users/<%=@user.id%>/delete" class="btn">Delete Account</a>
   </div>
   <div class='surveys'>
   	<h3>Your Surveys:</h3>
   	<% @user.surveys.all.each do |survey| %>
-  	<% (survey.yes_num + survey.no_num) > 0 ? percent_yes = survey.yes_num / (survey.yes_num + survey.no_num) : percent_yes = "N/A" %>
+  	<!-- Why the frick won't this work for the percentage -->
+  	<% percent_yes = "N/A" %>
+  	<% percent_yes = ((survey.yes_num)/(survey.yes_num+survey.no_num)) if (survey.yes_num + survey.no_num) > 0 %>
+  	<!-- ########################## -->
   	<ul>
   		<li>
   			<a href="/surveys/<%=survey.id%>"><%=survey.title%></a>
