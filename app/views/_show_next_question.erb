@@ -1,0 +1,19 @@
+<!-- Saving for potential future implementation of AJAX to cycle through questions while taking a survey -->
+
+<div id="question_tracker">
+	<p><%= @current_q %>/<%= @total_qs %><p>
+</div>
+<div class="question">
+  	<p><%= @question.content %></p>
+</div>
+<div class="answers">
+  <form action="/surveys/<%=@survey.id%>/next_question" method="GET">
+	Yes <input type="radio" name="yesno" value="yes">
+	<br>
+    No <input type="radio" name="yesno" value="no">
+	<input type="submit">
+  </form>
+  <form action="/surveys/:id/complete" method="put">
+
+  </form>
+</div>
