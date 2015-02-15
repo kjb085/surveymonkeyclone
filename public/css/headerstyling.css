@@ -1,24 +1,32 @@
-.header {
-  width: 100%;
+#header {
   height: 175px;
   background: #81A594;
 }
 
 #title{
+position:relative;
 font-family: 'Dosis', sans-serif;
-padding-top: 75px;
-font-weight:700;
-padding-left: 15%;
 color:#E6E6DC;
+font-size:175%;
+font-weight:700;
+top:-10px;
 }
 
-.header img{
-
-position:relative;
+.logo img{
+  position:relative;
+height:175px;
 float:right;
-height:150px;
-right: 45%;
-top:-86px;
+}
+
+.wrap{
+    float:right;
+    text-align:center;
+    position:relative;
+    margin:0 auto;
+
+    width:725px;
+    height:100%;
+
 
 }
 
