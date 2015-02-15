@@ -1,42 +1,39 @@
 get '/surveys/:id' do |id|
   @survey = Survey.find(id)
-  @q_count = @survey.questions.count
-  @current_q = 1
-  session[:yes] = 0
-  session[:no] = 0
+  @questions = @survey.questions.all
   erb :take_survey
 end
 
-post '/surveys/:id/answer_question' do
-  # locally store num of yes-es and num of nos
-  # maybe need the table that we discussed as answers or use session
-  "*"*30
-  p params
-  "*"*30
-  
-  # if params[:yes]
-  #   put "yes"
-  #   session[:yes] += 1
-  # elsif answer_id == 0
-  #   put "no"
-  #   session[:no] += 1
-  # else 
-  #   puts "ERROR"
-  # end
+# Reserved for later implementation of AJAX to cycle questions
+# 
+# get '/surveys/:id/next_question' do |id|
+#   erb :_show_next_question, :layout => false
+# end
 
-end
+put '/surveys/:id/complete' do |id|
 
-# Maybe make a method that constantly checks the value of the sum of session yes & no vs the count of the questions in the survey
+  survey = Survey.find(id)
 
-# Maybe have a x/total view on the page to show how far through the survey you are
+  total_questions = survey.questions.count
 
-post '/surveys/:id/complete' do |id|
-  # move all temp held answers into the survey database and increment the times taken by 1
-  # find a way to make sure all answers are populated before submit is allowed
-end
+  if params[:answers] && params[:answers].length == session[:q_count]
+	params[:answers].each_value do |answer|
+	  if answer == "yes"
+	  	survey.yes_num += 1
+	  elsif answer == "no"
+	  	survey.no_num += 1
+	  else
+	  	nil
+	  end
+	end
+	
+	survey.num_taken += 1
+  	survey.save
 
-get '/survey/:id/new_question' do |id|
-  @question = Survey.find(id).questions.find() #next question 
-  # I think this is the route that I'm going to use to cycle the question
+  	redirect '/surveys'
+  else
+  	# Create something on the page with jquery that indicates that all questions need to be answered
+  	redirect '/surveys/#{id}'
+  end
 end
 
