@@ -16,8 +16,8 @@ put '/surveys/:id' do |id|
 
   total_questions = survey.questions.count
 
-  if params[:answers].length == total_questions
-  	params[:answers].each_value do |answer|
+  if params[:answers] && params[:answers].length == total_questions
+	  params[:answers].each_value do |answer|
   	  if answer == "yes"
   	  	survey.yes_num += 1
   	  elsif answer == "no"
@@ -32,6 +32,7 @@ put '/surveys/:id' do |id|
 
     redirect '/surveys'
   else
+    # This isn't really working right now, not sure why
   	# Create something on the page with jquery that indicates that all questions need to be answered
   	redirect '/surveys/#{id}'
   end
