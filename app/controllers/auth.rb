@@ -9,11 +9,13 @@ post '/login' do
 
   if user.try(:authenticate, params[:user][:password])
     session[:id] = user.id
-    redirect '/'
-  else
-    redirect '/signup'
-  end
 
+    if request.xhr?
+      erb :welcome, layout: false
+    else
+      redirect '/signup'
+    end
+  end
 end
 
 ######################### SIGNUP ###########################################
