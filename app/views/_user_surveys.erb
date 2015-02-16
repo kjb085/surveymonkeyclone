@@ -6,13 +6,15 @@
   <ul>
   	<li>
   		<a href="/surveys/<%=survey.id%>"><%=survey.title%></a>
-      <div class='stats'>
-    		<p>Positive Stats: <%= percent_yes %> <%= percent_yes.is_a?(Float) ? "%" : "" %> </p>
-    		<p>Times taken: <%= survey.num_taken %></p>
-    		<p>Created at: <%= survey.created_at %></p>
+      <div class='statslist'>
+    		<p>Positive Stats: <text id='stat'><%= percent_yes %><%= percent_yes.is_a?(Float) ? "%" : "" %> </text> </p>
+    		<p>Times taken:<text id="stat"> <%= survey.num_taken %></text ></p>
+    		<p>Created at: <text id="stat"><%= survey.created_at %></text></p>
+      </div>
+      <div class="modify_survey">
     		<a href="/surveys/<%=survey.id%>/edit" class="btn">Edit</a>
-    		<a href="/surveys/<%=survey.id%>" class="btn delete_survey" name="<%=survey.id%>">Delete</a>
-    </div>
+    		<a  href="/surveys/<%=survey.id%>" class="btn delete_survey" name="<%=survey.id%>">Delete</a>
+      </div>
   	</li>
   </ul>
   <% end %>
