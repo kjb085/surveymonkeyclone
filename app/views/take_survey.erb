@@ -2,7 +2,6 @@
 
   	<p class="surveyTitle"><%= @survey.title %><p>
 
-
   <div id="questions">
     <!-- <div id="question_tracker">
       <p><%= @current_q %>/<%= @total_qs %><p>
@@ -18,8 +17,8 @@
         Yes <input type="radio" name="answers[<%=index%>yesno]" value="yes">
         <br>
         No <input type="radio" name="answers[<%=index%>yesno]" value="no">
-        <% end %>
-        <input id="submit_survey" type="submit" value="Submit Survey">
+        <% end %><br>
+        <input class="submitbutton" type="submit" value="Submit Survey">
       </div>
     </form>
   </div>

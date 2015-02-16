@@ -10,16 +10,43 @@
 
 
 .surveyTitle{
-
   position: relative;
   font-weight:700;
-
+  top:100px;
+  font-size:200%;
+  float:left;
 }
 
+#questions{
+  position:relative;
+  float:right;
+  right:200px;
+}
 #question_content{
   position:relative;
-
   color:black;
-  left:30px;
+  left:40px;
+  font-size:150%;
+}
+
+.submitbutton{
+position:relative;
+  background:none;
+  border:none;
+  top:100px;
+  color:#81A594;
+  left:5px;
+  font-size:175%;
+}
+.submitbutton:hover{
+position:relative;
+  background:none;
+  border:none;
+  top:100px;
+  color:black;
+  left:5px;
+  font-size:175%;
+
+
 
 }
