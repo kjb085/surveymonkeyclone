@@ -1,8 +1,7 @@
-<div class="main">
+<div class="survey">
 
-  <div class="survey">
-  	<h2><%= @survey.title %></h2>
-  </div>
+  	<p class="surveyTitle"><%= @survey.title %><p>
+
 
   <div id="questions">
     <!-- <div id="question_tracker">
@@ -13,7 +12,7 @@
       <input type="hidden" name="_method" value="put">
       <% @questions.each_with_index do |question, index| %>
       <div class="question">
-        <p><%= question.content %></p>
+        <p id='question_content'><%= question.content %></p>
       </div>
       <div class="answers">
         Yes <input type="radio" name="answers[<%=index%>yesno]" value="yes">

@@ -85,7 +85,7 @@ $(document).ready(function() {
     })
   })
 
-// FOR DELETING QUESTIONS WHILE MAKING THE THANGS
+
 
 // $('.remove-question').on('click',function(event){
 

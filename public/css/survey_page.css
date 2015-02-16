@@ -1,0 +1,25 @@
+.survey{
+  position:relative;
+  top:30px;
+  height:100%;
+  width:100%;
+  font-family: 'Dosis', sans-serif;
+  text-align:center;
+  color:#81A594;
+}
+
+
+.surveyTitle{
+
+  position: relative;
+  font-weight:700;
+
+}
+
+#question_content{
+  position:relative;
+
+  color:black;
+  left:30px;
+
+}
