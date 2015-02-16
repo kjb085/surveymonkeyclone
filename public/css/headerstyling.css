@@ -115,7 +115,7 @@ top:25px;
     margin-right:auto;
     background: #81A594;
     font-family: 'Dosis', sans-serif;
-    color:;
+
   }
 
 .container{
@@ -184,4 +184,21 @@ a:hover{
 }
 
 
+.logged_in_nav{
 
+  position:absolute;
+  height:175px;
+  width:500px;
+  margin-left:25px;
+
+}
+
+.logged_in_nav a{
+
+  position:relative;
+  margin-left:10px;
+  margin-right:10px;
+   font-family: 'Dosis', sans-serif;
+   top:130px;
+
+}
