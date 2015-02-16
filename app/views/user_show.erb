@@ -1,10 +1,11 @@
 <div class="main">
   <div class='welcome'>
-  	<h1>Hello <%= @user.name %></h1>
-  	<p>Options:</p>
-  	<a href="/surveys">See all surveys</a>
-  	<a href="/users/<%=@user.id%>/edit" class="btn">Edit Profile</a>
-  	<a href="/users/<%=@user.id%>/delete" class="btn">Delete Account</a>
+  	<p id="name">>> Hello <%= @user.name %> <<<p>
+    <div class='linkbox'>
+      <a href="/surveys/new">Create Survey</a>
+    	<a href="/users/<%=@user.id%>/edit" class="btn">Edit Yourself</a>
+    	<a href="/users/<%=@user.id%>/delete" class="btn">Delete Yourself</a>
+    </div>
   </div>
   <div class='surveys'>
   	<%= erb :_user_surveys %>

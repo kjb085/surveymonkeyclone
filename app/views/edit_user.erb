@@ -1,11 +1,14 @@
-<div class="main">
-  <h3>Input information you would like to update</h3>
+
+
+
+<div class="edit_user">
+  <p class='edit_title'>Here's to a new you!</h3>
   <form action="/users/<%=@user.id%>" method="post">
   	<input type="hidden" name="_method" value="put">
   	Username<input type="text" name="edit[name]">
   	Email<input type="text" name="edit[email]">
   	Password<input type="text" name="edit[password]">
   	Password Confirmation<input type="text" name="edit[password_confirmation]">
-  	<input type="submit">
+  	<input class="edit_button" type="submit">
   </form>
 </div>

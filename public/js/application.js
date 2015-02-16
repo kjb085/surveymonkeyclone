@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-  // Login AJAX Call
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   	$("#login_btn").on("click", function(event){
   		event.preventDefault();
@@ -13,7 +12,7 @@ $(document).ready(function() {
     });
 
   	$("#login_ajax").on("submit", function(event){
-  		event.preventDefault();
+  		// event.preventDefault();
   		var $form = $(event.target);
   		$.ajax({
   			url: $form.attr('action'),
@@ -29,7 +28,7 @@ $(document).ready(function() {
   	});
 
     $("#signup_ajax").on("submit", function(event){
-      event.preventDefault();
+      // event.preventDefault();
       var $form = $(event.target);
       $.ajax({
         url: '/signup',
@@ -86,7 +85,7 @@ $(document).ready(function() {
     })
   })
 
-// FOR DELETING QUESTIONS WHILE MAKING THE THANGS
+
 
 // $('.remove-question').on('click',function(event){
 

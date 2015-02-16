@@ -1,0 +1,218 @@
+#header {
+  height: 175px;
+  background: #81A594;
+}
+#title{
+  position:relative;
+  font-family: 'Dosis', sans-serif;
+  color:#E6E6DC;
+  font-size:175%;
+  font-weight:700;
+  top:-28px;
+}
+.logo img{
+  position:relative;
+  height:175px;
+  float:right;
+}
+.container_login{
+  position:relative;
+  outline:0;
+  top:150px;
+}
+.wrap{
+    float:right;
+    text-align:center;
+    position:relative;
+    margin:0 auto;
+    width:725px;
+    height:100%;
+}
+.login{
+  margin-top:50px;
+  position:relative;
+  height:500px;
+}
+.logout{
+  position:relative;
+  top:125px;
+  color:#E6E6DC;
+  text-decoration:none;
+  left:25px;
+  font-size:15px;
+}
+.logout:hover{
+  color: #602b2b;
+  position:relative;
+  top:125px;
+  text-decoration:none;
+  left:25px;
+  font-size:15px;
+}
+.inner {
+  margin-left:15%;
+  margin-right:15%;
+  position:relative;
+  height:50%;
+  text-align:center;
+  outline:none;
+}
+#login_btn{
+  color:#E6E6DC;
+  background:#81A594;
+  padding:20px;
+  font-family: 'Dosis', sans-serif;
+  text-decoration:none;
+}
+.login_form{
+  position:relative;
+  top:35px;
+}
+#signup_btn{
+  position:relative;
+  color:#E6E6DC;
+  background:#81A594;
+  padding:20px;
+  font-family: 'Dosis', sans-serif;
+  top:125px;
+  text-decoration:none;
+}
+.signup_form{
+  position:relative;
+  top:180px;
+}
+.submit_btn{
+  position:relative;
+  background:none;
+  border:none;
+  font-family: 'Dosis', sans-serif;
+  top:35px;
+}
+.new_survey_container{
+position:relative;
+text-align:center;
+top:25px;
+}
+#text_title{
+  padding-top:5px;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+ font-family: 'Dosis', sans-serif;
+  color:#81A594;
+  font-size:150%;
+  font-weight:500;
+  border:solid 3px;
+  border-color:#81A594;
+  width:400px;
+  height:50px;
+  left:15px;
+}
+.surveybox{
+    position:relative;
+    width:100%;
+    top:25px;
+    margin-left:auto;
+    margin-right:auto;
+    background: #81A594;
+    font-family: 'Dosis', sans-serif;
+
+  }
+
+.container{
+  position:relative;
+  top:25px;
+}
+ textarea{
+  color:#E6E6DC;;
+}
+
+.question{
+  position:relative;
+  color:#E6E6DC;
+  margin-bottom:25px;
+  left:-24px;
+}
+
+#question{
+  position:relative;
+  left:11px;
+  color:#81A594;
+}
+
+
+}
+.questions-container{
+  position:relative;
+  top:10px;
+}
+.questions-container p{
+  position:relative;
+  color:#E6E6DC;
+  margin-bottom:50px;
+  margin-right:auto;
+  margin-left:auto;
+  top:25px;
+}
+
+.button{
+  background:none;
+  border:none;
+  font-family: 'Dosis', sans-serif;
+  color:#E6E6DC;
+  margin-bottom:20px;
+}
+
+.button:hover{
+  color:black;
+
+}
+
+ a{
+  text-decoration:none;
+  color:#E6E6DC;
+}
+a:hover{
+  color:black;
+}
+
+#surveytitle {
+  position:relative;
+  left:10px;
+  color:#81A594;
+
+
+}
+
+
+.logged_in_nav{
+
+  position:absolute;
+  height:175px;
+  width:500px;
+  margin-left:25px;
+
+}
+
+.logged_in_nav a{
+
+  position:relative;
+  margin-left:10px;
+  margin-right:10px;
+   font-family: 'Dosis', sans-serif;
+   top:130px;
+
+}
+
+.headerliner1{
+  height:10px;
+  background:#E6E6DC;
+  width:100%;
+}
+
+.headerliner2{
+  height:10px;
+  background:black;
+  width:100%;
+
+}

@@ -1,0 +1,63 @@
+.all_surveys{
+  position:relative;
+  top:30px;
+  height:100%;
+  width:100%;
+   font-family: 'Dosis', sans-serif;
+}
+
+.all_surveys p{
+  font-size:175%;
+  font-weight:700;
+  color:#81A594;
+
+  position:relative;
+ font-family: 'Dosis', sans-serif;
+  left:190px;
+}
+.first_button{
+ position:relative;
+  background:none;
+  border:none;
+  top:5px;
+  color:#81A594;
+  right:20px;
+
+}
+.first_button:hover{
+  color:black;
+}
+
+.all_surveys ul{
+  color:;
+  list-style:none;
+}
+.all_surveys li{
+
+}
+
+.surveyslist{
+  position:relative;
+  left:200px;
+
+}
+.surveyslist a{
+  font-size:150%;
+  color:black;
+  font-weight:600;
+}
+.surveyslist a:hover{
+  font-size:150%;
+  color:#81A594;
+  font-weight:600;
+}
+
+
+.surveyslist div{
+  color:#81A594;
+
+}
+
+#stat{
+  color:black;
+}

@@ -1,0 +1,88 @@
+.main{
+  position:relative;
+  top:50px;
+
+  height:100%;
+  width:100%;
+
+}
+
+#name{
+
+  position: relative;
+  font-weight:700;
+  font-size:175%;
+  color:#81A594;
+  font-family: 'Dosis', sans-serif;
+}
+
+#options{
+  color:black;
+  font-size:125%;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+.linkbox{
+  position: relative;
+  text-align:center;
+  text-decoration: underline;
+}
+.welcome a{
+
+  margin-right:50px;
+  margin-left:50px;
+  font-weight:700;
+  font-size:110%;
+  color:black;
+  font-family: 'Dosis', sans-serif;
+
+
+}
+#lessertitle{
+  top:50px;
+  position: relative;
+  font-weight:700;
+  font-size:150%;
+  color:#81A594;
+  font-family: 'Dosis', sans-serif;
+  margin-bottom:50px;
+}
+
+ul{
+  list-style:none;
+  margin-top:200px;
+  margin-bottom:200px;
+}
+
+.yoursurveys ul a{
+  color:black;
+  font-size:175%;
+  font-weight:800;
+
+  font-family: 'Dosis', sans-serif;
+
+}
+.yoursurveys ul a:hover{
+  color:#81A594;
+  font-family: 'Dosis', sans-serif;
+}
+.statslist{
+  color:#81A594;
+  font-family: 'Dosis', sans-serif;
+  font-size:90%;
+}
+
+#stat{
+  color:red;
+
+}
+
+.modify_survey{
+  font-size:50%;
+}
+
+.modify_survey a{
+  margin-left:25px;
+  margin-right:25px;
+}
