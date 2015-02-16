@@ -1,5 +1,5 @@
 #Survey Australopithecus Afarensis
-####Kenn Breece, Dongchul Lee, Chris Pachomski, Melissa Wimberly
+##### Developed By: Kenn Breece - Dongchul Lee - Chris Pachomski - Melissa Wimberly
 
 
 ##What and Why?
