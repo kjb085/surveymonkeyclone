@@ -6,22 +6,6 @@
   	<a href="/users/<%=@user.id%>/delete" class="btn">Delete Account</a>
   </div>
   <div class='surveys'>
-  	<h3>Your Surveys:</h3>
-  	<% @user.surveys.all.each do |survey| %>
-  	<!-- Why the frick won't this work for the percentage -->
-  	<% percent_yes = "N/A" %>
-  	<% percent_yes = ((survey.yes_num)/(survey.yes_num+survey.no_num)) if (survey.yes_num + survey.no_num) > 0 %>
-  	<!-- ########################## -->
-  	<ul>
-  		<li>
-  			<a href="/surveys/<%=survey.id%>"><%=survey.title%></a>
-  			<p>Positive Stats: <%= percent_yes %> <%= percent_yes.is_a?(Integer) ? "%" : "" %> </p>
-  			<p>Times taken: <%= survey.num_taken %></p>
-  			<p>Created at: <%= survey.created_at %></p>
-  			<a href="/users/<%=@user.id%>/edit" class="btn">Edit</a>
-  			<a href="#" class="btn">Delete</a>
-  		</li>
-  	</ul>
-  	<% end %>
+  	<%= erb :_user_surveys %>
   </div>
 </div>
