@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
 
   	$("#login_ajax").on("submit", function(event){
-  		event.preventDefault();
+  		// event.preventDefault();
   		var $form = $(event.target);
   		$.ajax({
   			url: $form.attr('action'),
@@ -28,7 +28,7 @@ $(document).ready(function() {
   	});
 
     $("#signup_ajax").on("submit", function(event){
-      event.preventDefault();
+      // event.preventDefault();
       var $form = $(event.target);
       $.ajax({
         url: '/signup',

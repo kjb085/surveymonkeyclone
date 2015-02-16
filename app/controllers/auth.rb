@@ -3,8 +3,21 @@ get '/' do
 end
 
 ##################### WELCOME PAGE#########################################
+get '/welcome' do
+  if session[:id].nil?
+    erb :welcome
+  else
+    redirect '/surveys' 
+  end
+end
+
+
 get '/index' do
-  erb :welcome
+  if session[:id].nil?
+    redirect '/welcome'
+  else
+    redirect '/surveys' 
+  end
 end
 
 get '/surveys' do
@@ -34,13 +47,18 @@ post '/login' do
   user = User.find_by(email: params[:user][:email])
   	if user.try(:authenticate, params[:user][:password])
     	session[:id] = user.id
-		  if request.xhr?
-    		erb :welcome, layout: false
-		  else
-  		  redirect '/signup'
- 		 end
- 		end
-    redirect '/surveys'
+      redirect '/surveys'
+    else
+      redirect '/welcome'
+		  # if request.xhr?
+    # 		# erb :welcome, layout: false
+    #     redirect '/index'
+		  # else
+  		#   redirect '/signup'
+ 		 # end
+    # else
+    end
+  # redirect '/index'
 end
 
 ####################### SIGNUP PAGE #######################################
@@ -54,18 +72,22 @@ post '/signup' do
 
   if user.save
     session[:id] = user.id
-    if request.xhr?
-      erb :welcome, layout: false
-    else
-      redirect '/signup'
-    end
+    # if request.xhr?
+    #   erb :welcome, layout: false
+    # else
+    #   redirect '/signup'
+    # end
+    redirect '/index'
+  else
+    redirect '/welcome'
   end
-  redirect '/surveys'
+  # redirect '/surveys'
 end
 
 ############################# LOGOUT ####################################
 get '/logout' do
-  session[:id] = nil
+  # session[:id] = nil
+  session.clear
   redirect '/'
 end
 
