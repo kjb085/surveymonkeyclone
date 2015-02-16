@@ -1,8 +1,9 @@
 <div class="main">
   <div class='welcome'>
-  	<h1>Hello <%= @user.name %></h1>
-  	<p>Options:</p>
-  	<a href="/surveys">See all surveys</a>
+  	<p id="name">Hello <%= @user.name %><p>
+  	<p id="options">Options:</p>
+  	<a href="/surveys">See All Surveys</a>
+    <a href="/surveys/new">Create Survey</a>
   	<a href="/users/<%=@user.id%>/edit" class="btn">Edit Profile</a>
   	<a href="/users/<%=@user.id%>/delete" class="btn">Delete Account</a>
   </div>
