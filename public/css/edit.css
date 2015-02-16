@@ -1,0 +1,51 @@
+.edit_user{
+font-family: 'Dosis', sans-serif;
+}
+
+.edit_user form input{
+display:block;
+margin-top:15px;
+margin-bottom:50px;
+}
+
+.edit_button{
+position:relative;
+background:none;
+border:none;
+top:50px;
+
+}
+.edit_button:hover{
+position:relative;
+background:none;
+border:none;
+color:#81A594;
+
+}
+
+.edit_title{
+font-size:175%;
+color:#81A594;
+}
+
+.edit_survey{
+position:relative;
+font-family: 'Dosis', sans-serif;
+text-align:center;
+}
+
+#inside{
+  color:#81A594;
+}
+
+#ul_edit_fix{
+position:relative;
+margin-top:50px;
+margin-bottom:50px;
+left:-26px;
+}
+
+.50px_bottom_margin{
+margin-bottom:50px;
+
+}
