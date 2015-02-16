@@ -1,0 +1,12 @@
+<div class="main">
+  <form action="/surveys/<%=@survey.id%>" method="post">
+  	<input type="hidden" name="_method" value="put">
+  	Title<input type="text" value="<%=@survey.title%>" name="survey[title]">
+  	<% @survey.questions.each_with_index do |question, index| %>
+  	<ul>
+  		<li>Question <%= index + 1 %>:<input type="text" value="<%=question.content%>" name="q<%=index%>[content]"></li>
+  	</ul>
+  	<% end %>
+  	<input type="submit" value="Update Survey">
+  </form>
+</div>
