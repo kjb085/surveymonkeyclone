@@ -12,6 +12,12 @@ $(document).ready(function() {
       $(".signup_form").toggle();
     });
 
+    $(".add_btn").on("click", function(event){
+      event.preventDefault();
+      console.log("you clicked!")
+      $(".new_post").toggle();
+    });
+
 
     $(".login_ajax").on("submit", function(event){
       event.preventDefault();
@@ -21,7 +27,7 @@ $(document).ready(function() {
         type: $form.attr('method'),
         data: $form.serialize(),
         success: function(response){
-          $(".container").remove();
+          $(".auth_btns").remove();
           $("#content").append(response);
           console.log(response);
         },

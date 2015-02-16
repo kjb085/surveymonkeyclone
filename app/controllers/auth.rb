@@ -6,12 +6,12 @@ end
 
 post '/login' do
   user = User.find_by( username: params[:user][:username] )
-
+  skatelogs = Skatelog.all
   if user.try(:authenticate, params[:user][:password])
     session[:id] = user.id
 
     if request.xhr?
-      erb :index, layout: false
+      erb :'_partials/_auth', layout: false
     else
       redirect '/signup'
     end

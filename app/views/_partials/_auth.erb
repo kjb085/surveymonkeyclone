@@ -1,0 +1,23 @@
+<div class="auth_btns">
+    <% if current_user %>
+      <% user = current_user %>
+      <h2>Welcome to SkateLyfe <%=user.name %>!</h2>
+      <h4>Checkout all these skaters' skatelogs!</h4>
+
+      <a class="logout_btn" href="/logout">LOGOUT</a>
+      <a href="/users/new"> + </a>
+    <% else %>
+      <h2>Welcome to SkateLyfe!</h2>
+      <h4>Checkout all these skaters' skatelogs!</h4>
+
+      <div class="btn_container">
+        <a class="login_btn" href="/login">LOGIN</a>
+      </div>
+      <%= erb :login %>
+
+      <div class="btn_container">
+        <a class="signup_btn" href="/signup">SIGNUP</a>
+      </div>
+      <%= erb :signup %>
+     <% end %>
+  </div>

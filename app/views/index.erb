@@ -1,22 +1,4 @@
-
 <div class="container">
-
-   <h2>Welcome to SkateLyfe!</h2>
-   <h4>Checkout all these skaters' skatelogs!</h4>
-
-   <div class="auth_btns">
-    <% if current_user %>
-      <a class="logout_btn" href="/logout">LOGOUT</a>
-      <a href="/show"> + </a>
-    <% else %>
-      <a class="login_btn" href="/login">LOGIN</a>
-      <%= erb :login %>
-      <a class="signup_btn" href="/signup">SIGNUP</a>
-      <%= erb :signup %>
-     <% end %>
-  </div>
-
-  <%= erb :list_skatelogs %>
-
-
+  <%= erb :'_partials/_auth' %>
+  <%= erb :list_skatelogs, locals: {skatelogs: @skatelogs} %>
 </div>

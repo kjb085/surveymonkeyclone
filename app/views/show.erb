@@ -1,22 +1,27 @@
 
 <div class="container">
-THis is the users prof page with their picture, name, username, and all posts
-<% if current_user %>
-  <% user = current_user %>
+This is the users prof page with their picture, name, username, and ALL THEIR SKATELOGS
+
 
     <div class="list_skatelogs">
-
+      <% if current_user %>
+      <% user = current_user %>
+      <%= erb :show %>
+      <% end %>
     </div>
 
+
+
+<!-- add that button there -->
     <div class="actions">
       <div class="btn_container">
-        <a class='btn' href="/users/delet">delete a session</a>
+        <a class='delete_btn' href="/users/delete">delete a session</a>
       </div>
     </div>
 
     <div class="actions">
       <div class="btn_container">
-        <a class='btn' href="/users/new">add a new sessions</a>
+        <a class='add_btn' href="/users/new">add a new sessions</a>
       </div>
     </div>
 
