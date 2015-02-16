@@ -99,7 +99,6 @@ top:25px;
   margin-left:auto;
   margin-right:auto;
  font-family: 'Dosis', sans-serif;
-
   color:#81A594;
   font-size:150%;
   font-weight:500;
@@ -115,14 +114,74 @@ top:25px;
     margin-left:auto;
     margin-right:auto;
     background: #81A594;
-}
-.questions-container{
+    font-family: 'Dosis', sans-serif;
+    color:;
+  }
+
+.container{
   position:relative;
   top:25px;
 }
+ textarea{
+  color:#E6E6DC;;
+}
+
+.question{
+  position:relative;
+  color:#E6E6DC;
+  margin-bottom:25px;
+  left:-24px;
+}
+
+#question{
+  position:relative;
+  left:11px;
+  color:#81A594;
+}
+
+
+}
+.questions-container{
+  position:relative;
+  top:10px;
+}
 .questions-container p{
   position:relative;
-  background:gray;
+  color:#E6E6DC;
+  margin-bottom:50px;
+  margin-right:auto;
+  margin-left:auto;
+  top:25px;
 }
+
+.button{
+  background:none;
+  border:none;
+  font-family: 'Dosis', sans-serif;
+  color:#E6E6DC;
+  margin-bottom:20px;
+}
+
+.button:hover{
+  color:black;
+
+}
+
+ a{
+  text-decoration:none;
+  color:#E6E6DC;
+}
+a:hover{
+  color:black;
+}
+
+#surveytitle {
+  position:relative;
+  left:10px;
+  color:#81A594;
+
+
+}
+
 
 

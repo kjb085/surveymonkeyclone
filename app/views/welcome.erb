@@ -1,6 +1,7 @@
 
 
 
+
 <div class='container'>
   <h2>WELCOME TO SURVEY MONKEY...</h2>
   <h6>As seen by Chris, Dongchul, Kenn, and Missy</h6>
@@ -10,9 +11,6 @@
     <p><a href="/users/<%=current_user.id%>">Go to Profile</a></p>
     <p><a href="/logout">LOGOUT</a></p>
   <%else%>
-
-
-
     <a id="login_btn" href="/login">Login</a>
     <%= erb :login %>
     <a id="signup_btn" href="/signup">Signup</a>
@@ -20,3 +18,15 @@
   <%end%>
 
 </div>
+
+  <div class='container login'>
+    <div class="inner login">
+      <%if current_user%>
+        <a id="login_btn" href="/login">Login</a>
+        <%= erb :login %>
+        <a id="signup_btn" href="/signup">Signup</a>
+        <%= erb :signup%>
+      <%end%>
+    </div>
+  </div>
+
