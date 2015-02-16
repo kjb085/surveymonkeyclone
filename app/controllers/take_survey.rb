@@ -10,7 +10,7 @@ end
 #   erb :_show_next_question, :layout => false
 # end
 
-put '/surveys/:id' do |id|
+put '/surveys/:id/complete' do |id|
 
   survey = Survey.find(id)
 

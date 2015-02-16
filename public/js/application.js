@@ -70,6 +70,22 @@ $(document).ready(function() {
 
   })
 
+  $('.delete_survey').on('click', function(event){
+    event.preventDefault();
+
+    $.ajax({
+      type: 'delete',
+      url: this.href,
+      success: function(response){
+        // console.log(response)
+        $('.surveys').html(response)
+      },
+      error: function(){
+        console.log("ERROR WILL ROBINSON")
+      }
+    })
+  })
+
 // FOR DELETING QUESTIONS WHILE MAKING THE THANGS
 
 // $('.remove-question').on('click',function(event){
