@@ -7,8 +7,6 @@ end
 post '/surveys/create' do
 
 
-  session[:id] = 1
-
   @survey = Survey.create(user_id: session[:id], title: params[:title])
 
 
@@ -34,5 +32,43 @@ get '/surveys/new/add_question' do
  session[:question_count] = @question_count + 1
 
  erb :_add_questions, :layout => false
+
+end
+
+get '/surveys/:id/edit' do |id|
+
+  @survey = Survey.find(id)
+  erb :edit_survey
+
+end
+
+put '/surveys/:id' do |id|
+
+  p "*"*30
+  p params
+  p "*"*30
+
+  Survey.find(id).update_attributes(params[:survey])
+
+  Survey.find(id).questions.each_with_index do |question, index|
+  	question.update_attributes(params["q#{index}".to_sym])
+  end
+
+  redirect "/surveys/#{id}"
+
+end
+
+# AJAX Route
+delete '/surveys/:id' do |id| 
+
+  p "*"*30
+  p params
+  p "*"*30
+
+  Survey.find(id).destroy
+
+  @user = current_user
+
+  erb :_user_surveys, :layout => false
 
 end
