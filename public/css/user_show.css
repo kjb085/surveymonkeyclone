@@ -1,7 +1,7 @@
 .main{
   position:relative;
   top:50px;
-  background:black;
+  background:blue;
   border:solid;
   border-color:red;
 }
@@ -10,13 +10,31 @@
 
   position: relative;
   font-weight:700;
-
   font-size:175%;
- color:#81A594;
+  color:#81A594;
   font-family: 'Dosis', sans-serif;
 }
 
 #options{
+  color:black;
+  font-size:125%;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+.linkbox{
+  position: relative;
+  text-align:center;
+  text-decoration: underline;
+}
+.welcome a{
+
+  margin-right:20px;
+  margin-left:20px;
+  font-weight:700;
+  font-size:130%;
+  color:black;
+  font-family: 'Dosis', sans-serif;
 
 
 }
