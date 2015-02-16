@@ -44,8 +44,9 @@ post '/login' do
 end
 
 ####################### SIGNUP PAGE #######################################
+
 get '/signup' do
-  erb :signup
+  erb :signup, layout:false
 end
 
 post '/signup' do

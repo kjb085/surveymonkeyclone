@@ -1,18 +1,15 @@
-<h1 align=center> Welcome to the survey </h1>
-<a href="/surveys/new"><input class="first_button" type="button" value='Create new survey!'></a>
-<a href="/users/<%=current_user.id%>"><input class="btn" type="button" value='Profile'></a>
-<br>
-<br>
+<div class='all_surveys'>
 
-<br>
-<h3 align=center>Surveys</h3>
-<hr>
+  <a href="/surveys/new"><input class="first_button" type="button" value='Create Survey'></a>
+  <p id="all_surveys_title">All Surveys</p>
 
-<div>
-	<% @surveys.each do |survey| %>
-	    <ul>
-	      <li><a href="/surveys/<%= survey.id %>"><%= survey.title%></a></li>
-	      <p>By: <%=survey.user.name%></p>
-	    </ul>
-	<%end%>
+  <div class="surveyslist">
+  	<% @surveys.each do |survey| %>
+  	    <ul>
+  	      <li><a href="/surveys/<%= survey.id %>">>> <%= survey.title%></a></li>
+  	      <div>By: <%=survey.user.name%></div>
+  	    </ul>
+  	<%end%>
+  </div>
+
 </div>
